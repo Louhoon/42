@@ -6,25 +6,27 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:41:39 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/05 18:35:00 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/05 21:13:17 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
+#include "libft.h"
 
-void    *ft_memset(void *b, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t n)
 {
-    int i;
-    i = 0;
-unsigned char *ptr;
+	int				i;
+	unsigned char	*ptr;
+
+	i = 0;
 ptr = b;
-while(i < (int) n)
-{
-    *ptr = c;
-    ptr++;
-    i++;
-}
-return(b);
+	while (i < (int) n)
+	{
+		*ptr = c;
+		ptr++;
+		i++;
+	}
+	return (b);
 }
 
 // int main(void)

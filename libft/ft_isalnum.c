@@ -6,18 +6,17 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:26:45 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/05 14:26:48 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/05 21:05:12 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 //#include <stdio.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	return(((c >= '0' && c <= '9') 
-	|| (c >= 'a' && c <= 'z') 
-	|| (c >= 'A' && c <= 'Z')));
+	return (((c >= '0' && c <= '9')
+			|| (c >= 'a' && c <= 'z')
+			|| (c >= 'A' && c <= 'Z')));
 }
 
 /*int main(void)
