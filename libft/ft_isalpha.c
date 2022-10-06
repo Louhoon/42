@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 23:05:59 by marvin            #+#    #+#             */
-/*   Updated: 2022/10/05 21:06:27 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:55:45 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_isalpha(int c)
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
 
-/*int main(void)
+int main(void)
 {
 	 char c = 'd';
 	 if(ft_isalpha(c) != 0)
@@ -28,4 +28,4 @@ int	ft_isalpha(int c)
 	 {
 			 printf("%c is not an alphabetical character", c);
 	 }
-}*/
+}
