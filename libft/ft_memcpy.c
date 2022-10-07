@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 17:02:11 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/07 19:20:50 by lvoisin-         ###   ########.fr       */
+/*   Created: 2022/10/07 17:16:56 by lvoisin-          #+#    #+#             */
+/*   Updated: 2022/10/07 20:50:21 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
-# include <stdio.h>
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	int	i;
 
-int		ft_isalnum(int c);
+	i = 0;
 
-int		ft_isalpha(int c);
+	if (dst == NULL)
+	return NULL;
 
-int		ft_isascii(int c);
+	char *char_dst;
+	char *char_src;
+	char_dst = (char *) dst;
+	char_src = (char *) src;
 
-int		ft_isdigit(int c);
+	while (i < (int) n)
+		{
+			char_dst[i] = char_src[i];
+			i++;
+		}
+		return dst;
+}
 
-int		ft_isprint(int c);
-
-size_t	ft_strlen(const char *s);
-
-void	*ft_memset(void *b, int c, size_t n);
-
-void	ft_bzero(void *s, size_t n);
-
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-
-#endif
+// int main(void)
+// {
+// ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+// }

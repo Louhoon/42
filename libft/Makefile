@@ -1,11 +1,9 @@
-.PHONY:			all clean fclean re
-
-SRCS			=	ft_isalnum.c ft_isprint.c ft_bzero.c ft_isascii.c ft_strlen.c ft_isdigit.c ft_isalpha.c ft_memset.c
+SRCS			=	ft_isalnum.c ft_isprint.c ft_bzero.c ft_isascii.c ft_strlen.c ft_isdigit.c ft_isalpha.c ft_memset.c ft_memcpy.c
 					
 OBJS			= $(SRCS:.c=.o)
 
 
-CC				= @gcc
+CC				= gcc
 RM				= @rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 
@@ -16,7 +14,7 @@ all:			$(NAME)
 				
 
 $(NAME):		$(OBJS)
-				@ar -crs $(NAME) $(OBJS)
+				ar -crs $(NAME) $(OBJS)
 				@echo	✅Done!
 
 clean:
@@ -27,3 +25,5 @@ fclean:			clean
 				@echo	🧼Cleaned!
 
 re:				fclean $(NAME)
+
+.PHONY:			all clean fclean re
