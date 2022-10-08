@@ -26,4 +26,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
+run:	$(CFALGS) $(NAME) main.c -o run
+
+
 .PHONY:			all clean fclean re

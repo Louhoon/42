@@ -130,7 +130,7 @@ int main(void)
 
     printf("STRLEN\n\n");
 
-    printf("%lld\n", ft_strlen("hello"));
+    printf("%ld\n", ft_strlen("hello"));
     
     printf("\n");
     printf("------------------------------------\n");
