@@ -17,15 +17,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	int	i;
 
 	i = 0;
-
 	if (dst == NULL)
 	return NULL;
-
 	char *char_dst;
 	char *char_src;
+	
 	char_dst = (char *) dst;
 	char_src = (char *) src;
-
 	while (i < (int) n)
 		{
 			char_dst[i] = char_src[i];
@@ -36,5 +34,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 // int main(void)
 // {
-// ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+// 	char src[] = "love you cat";
+// 	char dest[50];
+// 	ft_memcpy(dest, src, sizeof(char) * 50);
+// 	printf("src = %s\n", src);
+// 	printf("dest = %s\n", dest);
 // }
