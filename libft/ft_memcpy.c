@@ -1,14 +1,14 @@
-// // /* ************************************************************************** */
-// // /*                                                                            */
-// // /*                                                        :::      ::::::::   */
-// // /*   ft_memcpy.c                                        :+:      :+:    :+:   */
-// // /*                                                    +:+ +:+         +:+     */
-// // /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
-// // /*                                                +#+#+#+#+#+   +#+           */
-// // /*   Created: 2022/10/07 17:16:56 by lvoisin-          #+#    #+#             */
-// // /*   Updated: 2022/10/07 20:50:21 by lvoisin-         ###   ########.fr       */
-// // /*                                                                            */
-// // /* ************************************************************************** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/07 17:16:56 by lvoisin-          #+#    #+#             */
+/*   Updated: 2022/10/07 20:50:21 by lvoisin-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -34,22 +34,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // int main(void)
 // {
 // 	#include <stdio.h>
-	
+// 	#include <string.h>
 // 	char src[] = "love you cat";
 // 	char dest[50];
+// 	memcpy(dest, src, sizeof(char) * 12);
+// 	printf("src = %s\n", src);
+// 	printf("dest = %s\n", dest);
 // 	ft_memcpy(dest, src, sizeof(char) * 12);
 // 	printf("src = %s\n", src);
 // 	printf("dest = %s\n", dest);
-// }
-
-// int main(void)
-// {
-// 	#include <string.h>
-// 	#include <stdio.h>
-
-// 	char s[20] = "alightechs";
-// 	memmove(s+5, s, 7);
-// 	printf("%s\n", s);
-// 	memcpy(s+5, s, 7);
-// 	printf("%s\n", s);
 // }

@@ -1,4 +1,6 @@
-SRCS			=	ft_isalnum.c ft_isprint.c ft_bzero.c ft_isascii.c ft_strlen.c ft_isdigit.c ft_isalpha.c ft_memset.c ft_memcpy.c
+SRCS			=	ft_isalnum.c ft_isprint.c ft_bzero.c ft_isascii.c \
+					ft_strlen.c ft_isdigit.c ft_isalpha.c ft_memset.c \
+					ft_memcpy.c ft_memmove.c
 					
 OBJS			= $(SRCS:.c=.o)
 
@@ -26,7 +28,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-run:	$(CFALGS) $(NAME) main.c -o run
-
+testpoint.exe:	$(NAME)
+	@gcc $(NAME) $(OJBS) main.c
 
 .PHONY:			all clean fclean re
