@@ -10,7 +10,6 @@ RM				= @rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a
-OBJCS_DIR		= build
 
 all:			$(NAME)
 				
@@ -28,7 +27,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-testpoint.exe:	$(NAME)
-	@gcc $(NAME) $(OJBS) main.c
+test: all	
+	@./$(NAME)
 
 .PHONY:			all clean fclean re
