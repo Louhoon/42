@@ -31,8 +31,8 @@ ptr = b;
 
 // int main(void)
 // {
-//     char str[50] = "Hello world, i made it through the piscine";
+//     char str[50] = "";
 //     printf("\nBefore ft_memset: %s\n", str);
-//     ft_memset(str + 13, '.', 5*sizeof(char));
+//     ft_memset(str, 'A', 5*sizeof(char));
 //     printf("\nAfter ft_memset: %s\n", str);
 // }

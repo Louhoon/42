@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	char_dst = (char *) dst;
 	char_src = (char *) src;
-	if (dst == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	while (i < (int) n)
 	{
@@ -31,6 +31,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+// int main(void)
+// {
+// 	ft_memcpy(((void *)0), "segfaulter tu dois", 17);
+// }
 // int main(void)
 // {
 // 	#include <stdio.h>
