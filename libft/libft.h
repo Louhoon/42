@@ -55,8 +55,12 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 //char	*ft_strnstr(const char *fullString, const char *substring, size_t len);
 
-size_t ft_strlcpy(char *dest, const char *src, size_t destsize);
+size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 
 void	*ft_calloc(size_t count, size_t size);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+void	ft_putchar_fd(char c, int fd);
 
 #endif

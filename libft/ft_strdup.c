@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 20:15:29 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/12 18:59:32 by lvoisin-         ###   ########.fr       */
+/*   Created: 2022/10/12 18:25:46 by lvoisin-          #+#    #+#             */
+/*   Updated: 2022/10/12 18:54:43 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
-{
-	void	*allocated_memory;
+// char	*ft_strdup(const char *s1)
+// {
+// 	char *str;
+// 	int i;
 
-	allocated_memory = (void *) malloc(count * size);
-	if (!allocated_memory)
-		return (0);
-	ft_bzero(allocated_memory, count * size);
-	return (allocated_memory);
-}
+// 	i = 0;
+// 	str = (char *)malloc(sizeof(s1) * (ft_strlen(s1))
+
+// }
