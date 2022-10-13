@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:25:46 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/12 18:54:43 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/13 22:40:03 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 // char	*ft_strdup(const char *s1)
 // {
-// 	char *str;
-// 	int i;
-
-// 	i = 0;
-// 	str = (char *)malloc(sizeof(s1) * (ft_strlen(s1))
 
 // }
