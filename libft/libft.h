@@ -53,7 +53,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-//char	*ft_strnstr(const char *fullString, const char *substring, size_t len);
+char	*ft_strnstr(const char *fullString, const char *substring, size_t len);
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
 
@@ -68,5 +68,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
+
+int	ft_atoi(const char *str);
 
 #endif

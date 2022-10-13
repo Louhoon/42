@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 13:36:55 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/10 13:52:12 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/13 21:23:07 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (char) c)
-			return ((char *) s + i);
+			return (&((char *) s)[i]);
 		i--;
 	}
 	return (NULL);
