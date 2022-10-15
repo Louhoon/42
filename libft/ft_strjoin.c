@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 09:03:11 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/15 10:14:06 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/15 17:29:02 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	joinstr = (char *)malloc(sizeof(s1[i]) * (s1_len + s2_len + 1));
+	joinstr = malloc(sizeof(s1[i]) * (s1_len + s2_len + 1));
 	if (joinstr == NULL)
 		return (NULL);
 	while (s1[i])
@@ -45,4 +45,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	char *join;
 // 	join = ft_strjoin(s1, s2);
 // 	printf("%s\n", join);
+// 	//system("leaks a.out");
 // }
