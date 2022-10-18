@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 11:47:54 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/18 02:48:32 by lvoisin-         ###   ########.fr       */
+/*   Updated: 2022/10/18 23:02:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,6 @@
 // string should be trim in the beginning and end of string
 
 #include "libft.h"
-
-// static	int	check_set(char const *set, char c)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (set[i])
-// 	{
-// 		if (set[i] == c)
-// 			return (1);
-// 		i++;
-// 	}
-// 	return (0);
-// }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
