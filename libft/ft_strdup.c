@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:25:46 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/14 19:23:44 by marvin           ###   ########.fr       */
+/*   Updated: 2022/10/17 23:54:50 by lvoisin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,9 @@ char	*ft_strdup(const char *s1)
 //     o_len = strlen(original);
 //     d_len = strlen(duplicate);
 
-//     printf("Original String: '%s' (%d)\n",
-//             original,o_len);
-//     printf("Duplicate string: '%s' (%d)\n",
-//             duplicate,d_len);
-
-//     return(0);
+//      printf("Original String: '%s' (%d)\n",
+//              original,o_len);
+//      printf("Duplicate string: '%s' (%d)\n",
+//              duplicate,d_len);
+//      return(0);
 // }
