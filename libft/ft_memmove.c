@@ -44,10 +44,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	#include <string.h>
 // 	#include <stdio.h>
 
-// 	char s[20] = "alightechs";
-// 	char s1[20] = "alightechs";
-// 	ft_memmove(s1+5, s, 10);
+// 	char s[] = "\0";
+// 	char s1[4] = "you";
+// 	ft_memmove(s1, s, 4);
 // 	printf("%s\n", s1);
-// 	memmove(s+5, s, 10);
-// 	printf("%s\n", s);
+// 	memmove(s1, s, 4);
+// 	printf("%s\n", s1);
 // }
