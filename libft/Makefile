@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 10:13:56 by lvoisin-          #+#    #+#              #
-#    Updated: 2022/10/19 01:58:02 by marvin           ###   ########.fr        #
+#    Updated: 2022/10/22 00:45:46 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ OBJS			= $(SRCS:.c=.o)
 
 CC				= @gcc
 RM				= @rm -f
-# CFLAGS			= -Wall -Wextra -Werror -g3 -fsanitize=address
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror -g3 -fsanitize=address
+# CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a
 
