@@ -1,71 +1,88 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/19 10:30:18 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/19 10:30:18 by lvoisin-         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_split.c                                         :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/24 02:40:23 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/24 02:40:23 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 static    int    counter(const char *str, char c)
 {
-    int i;
+	int i;
 
-    i = 1;
-    while (*str != '\0')
-    {
-        if (*str == c)
-        i++;
-        str++;
-    }
-    return (i);
+	i = 1;
+	while (*str != '\0')
+	{
+		if (*str == c)
+			i++;
+		str++;
+	}
+	return (i);
 }
 
-static    int    take_word(char **new_string, int size, const char *s, char c)
+static    int    take_word(char **string, int size, const char *s, char c)
 {
-    const char *start;
-    const char *end;
-    int len;
-    int i;
-    
-    i = 0;
-    start = s;
-    while (i < size)
-    {
-    end = ft_strchr(start, c);
-    len = end - start + 1;
-    new_string[i] = malloc(sizeof(s) * len);
-    ft_strlcpy(new_string[i], start, len);
-        i++;
-        start = end + 1;
-    }
-    return (1);
+	const char *start;
+	const char *end;
+	int len;
+	int i;
+	
+	i = 0;
+	start = s;
+	while (i < size)
+	{
+	end = ft_strchr(start, c);
+	len = end - start + 1;
+	string[i] = malloc(sizeof(char) * len);
+	if (!string)
+		return (0);
+	ft_strlcpy(string[i], start, len);
+		i++;
+		start = end + 1;
+	}
+	return (1);
 }
 
 char    **ft_split(char const *s, char c)
 {
-    char **new_string;
-    int strings;
+	char **new_string;
+	int strings;
 
-    strings = counter(s, c);
-    new_string = malloc(sizeof(s) * strings + 1);
+	strings = counter(s, c);
+	new_string = malloc(sizeof(char *) * (strings + 1));
 	if (!new_string)
 		return (NULL);
-    take_word(new_string, strings, s, c);
-    return (new_string);
+	take_word(new_string, strings, s, c);
+	return (new_string);
 }
 
 // int main()
 // {
-// 	char **s;
-// 	s = ft_split("hello world dfg", ' ');
-// 	while (*s)
-//     printf("%s\n", *s++);
-// 	//system("leaks a.out");
-//     return (1);
+//   // test the function
+//   char s[] = "To be, or not to be, that is the question.";
+//   int count_strings = 10;
+//   char **split_strings = ft_split(s, 'a');
+  
+//   // print out the substrings, which should be each word of the sentence above
+//   for (int i = 0; i < count_strings; i++)
+//     printf("%s\n", split_strings[i]);
+  
+//   // free the dynamically allocated space for each string
+//   for (int i = 0; i < count_strings; i++)
+//     free(split_strings[i]);
+  
+//   // free the dynamically allocated space for the array of pointers to strings
+//   free(split_strings);
+
+// //system("leaks a.out");
+  
+//   return 0;
 // }

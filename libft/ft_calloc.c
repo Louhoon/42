@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 20:15:29 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/15 20:58:51 by lvoisin-         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_calloc.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/11 20:15:29 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/24 04:35:26 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "limits.h"
-#include "unistd.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

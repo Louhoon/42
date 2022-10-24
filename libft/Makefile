@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/15 10:13:56 by lvoisin-          #+#    #+#              #
-#    Updated: 2022/10/19 01:58:02 by marvin           ###   ########.fr        #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: lvoisin- <lvoisin-@student.42.fr>            +#+                      #
+#                                                    +#+                       #
+#    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
+#    Updated: 2022/10/24 11:02:17 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,14 @@ SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 					ft_atoi.c ft_calloc.c ft_strdup.c \
 					ft_substr.c ft_strjoin.c ft_strtrim.c \
 					ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-					ft_putendl_fd.c ft_putnbr_fd.c ft_split.c ft_itoa.c
+					ft_putendl_fd.c ft_putnbr_fd.c ft_split.c ft_itoa.c \
+					ft_strmapi.c ft_split.c
 					
 OBJS			= $(SRCS:.c=.o)
 
 
 CC				= @gcc
 RM				= @rm -f
-# CFLAGS			= -Wall -Wextra -Werror -g3 -fsanitize=address
 CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a

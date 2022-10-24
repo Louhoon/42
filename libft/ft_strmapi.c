@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_striteri.c                                      :+:    :+:            */
+/*   ft_strmapi.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/18 03:12:36 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:57:43 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/24 04:20:16 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/24 04:57:02 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
+	int		i;
+	char	*str;
 
 	i = 0;
-	while (s[i])
+	str = ft_strdup(s);
+	if (!str)
+		return (NULL);
+	while (str[i])
 	{
-		f(i, &s[i]);
+		str[i] = (*f)(i, str[i]);
 		i++;
 	}
+	return (str);
 }

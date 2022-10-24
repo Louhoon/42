@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 18:25:46 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/17 23:54:50 by lvoisin-         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strdup.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/12 18:25:46 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/24 04:42:44 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	s1_size = ft_strlen(s1);
-	dupstring = ((char *)malloc(sizeof(s1[i]) * (s1_size + 1)));
+	dupstring = malloc(sizeof(s1[i]) * (s1_size + 1));
 	if (dupstring == NULL)
 		return (NULL);
 	while (s1[i])

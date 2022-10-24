@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: lvoisin- <lvoisin-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 11:32:57 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/17 21:28:56 by lvoisin-         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_substr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/15 11:32:57 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/24 04:55:59 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
 
 // int main(void)
 // {
