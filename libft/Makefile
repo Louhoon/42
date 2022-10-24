@@ -3,10 +3,10 @@
 #                                                         ::::::::             #
 #    Makefile                                           :+:    :+:             #
 #                                                      +:+                     #
-#    By: lvoisin- <lvoisin-@student.42.fr>            +#+                      #
+#    By: marvin <marvin@student.42.fr>                +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
-#    Updated: 2022/10/24 11:02:17 by lvoisin-      ########   odam.nl          #
+#    Updated: 2022/10/24 13:28:27 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ OBJS			= $(SRCS:.c=.o)
 
 CC				= @gcc
 RM				= @rm -f
+#CFLAGS			= -Wall -Wextra -Werror -g3 -fsanitize=address
 CFLAGS			= -Wall -Wextra -Werror -I.
 
 NAME			= libft.a
