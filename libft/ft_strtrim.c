@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 11:47:54 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/18 23:02:34 by marvin           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strtrim.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: marvin <marvin@student.42.fr>                +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/15 11:47:54 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/27 09:12:12 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 // string should be trim in the beginning and end of string
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -47,8 +48,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main(void)
 // {
-// 	char s1[] = "";
-// 	char *plubuscule = ft_strtrim(s1, "");
+// 	char s1[] = "hello.world.hello";
+// 	char *plubuscule = ft_strtrim(s1, "hello.");
 // 	printf("%s\n", plubuscule);
 // 	free(plubuscule);
 // 	return (0);

@@ -14,51 +14,64 @@
 #include <stdio.h>
 #include <string.h>
 
-static    int    counter(const char *str, char c)
+static	int	counter(const char *str, char c)
 {
 	int	i;
+	int	count_word;
 
-	i = 1;
-	while (*str)
+	i = 0;
+	count_word = 0;
+	if (str[i] == '\0')
+		count_word = 0;
+	while (str[i] == c && str[i])
+		i++;
+	while (str[i])
+	{
+		if (str[i] == c && str[i])
 		{
-			if (*str == c)
-				i++;
-			str++;
+			count_word++;
+			while (str[i] == c && str[i])
+			i++;
 		}
-		return (i);
+		if (str[i] != c && str[i])
+			i++;
+	}
+	if (str[i - 1] != c)
+			count_word = count_word + 1;
+	return (count_word);
 }
 
-static    int    take_word(char **new_string, int size, const char *s, char c)
+static	int	take_word(char **new_string, int size, const char *s, char c)
 {
-	const char *start;
-	const char *end;
-	int len;
-	int i;
-	
+	const char	*start;
+	const char	*end;
+	int			len;
+	int			i;
+
 	i = 0;
 	start = s;
 	while (i < size)
 	{
 	end = ft_strchr(start, c);
 	len = end - start + 1;
-	new_string[i] = malloc(sizeof(s) * len);
-	if (!new_string[i])
-		return (0);
-	ft_strlcpy(new_string[i], start, len);
+	new_string[i] = malloc(sizeof(char) * (counter(s, c) + 1));
+		if (!new_string[i])
+			return (0);
+		ft_strlcpy(new_string[i], start, len);
 		i++;
 		start = end + 1;
 	}
 	return (i);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **new_string;
-	int strings;
-	int i;
+	char	**new_string;
+	int		strings;
+	int		i;
 
 	strings = counter(s, c);
-	new_string = malloc(sizeof(char *) * (strings + 1));
+	new_string = malloc(sizeof(s) * (strings + 1));
 	if (!new_string)
 		return (NULL);
 	i = take_word(new_string, strings, s, c);
@@ -68,23 +81,14 @@ char    **ft_split(char const *s, char c)
 
 int main()
 {
-  // test the function
   char s[] = "   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ";
-  int count_strings = 10;
+  int count_strings = 12;
   char **split_strings = ft_split(s, ' ');
-  
-  // print out the substrings, which should be each word of the sentence above
   for (int i = 0; i < count_strings; i++)
-    printf("%s\n", split_strings[i]);
-  
-  // free the dynamically allocated space for each string
+	printf("%s\n", split_strings[i]);
   for (int i = 0; i < count_strings; i++)
-    free(split_strings[i]);
-  
-  // free the dynamically allocated space for the array of pointers to strings
+	free(split_strings[i]);
   free(split_strings);
-
 //system("leaks a.out");
-  
   return 0;
 }
