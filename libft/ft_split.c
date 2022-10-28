@@ -14,6 +14,24 @@
 #include <stdio.h>
 #include <string.h>
 
+static char	**free_tab(char **result)
+{
+	int	i;
+
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (result[i])
+	{
+		free(result[i]);
+		result[i] = NULL;
+		i++;
+	}
+	free (result);
+	return (NULL);
+}
+
+
 static	int	counter(const char *str, char c)
 {
 	int	i;
@@ -37,29 +55,36 @@ static	int	counter(const char *str, char c)
 			i++;
 	}
 	if (str[i - 1] != c)
-			count_word = count_word + 1;
+			count_word++;
 	return (count_word);
 }
 
-static	int	take_word(char **new_string, int size, const char *s, char c)
+static	int	end_word(const char *s, char c, int i)
 {
-	const char	*start;
-	const char	*end;
-	int			len;
-	int			i;
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
+}
+
+static	int	store_words(char **new_string, const char *s, char c)
+{
+	int	end;
+	int	i;
 
 	i = 0;
-	start = s;
-	while (i < size)
+	while (s[i])
 	{
-	end = ft_strchr(start, c);
-	len = end - start + 1;
-	new_string[i] = malloc(sizeof(char) * (counter(s, c) + 1));
-		if (!new_string[i])
-			return (0);
-		ft_strlcpy(new_string[i], start, len);
+		if (s[i] != c)
+		{
+			end = end_word(s, c, i);
+			new_string[i] = ft_calloc(end - i + 1, sizeof(**new_string));
+			if (!*new_string)
+				return (0);
+			ft_memcpy(*new_string, s + i, end - i);
+			new_string++;
+			i = end - 1;
+		}
 		i++;
-		start = end + 1;
 	}
 	return (i);
 }
@@ -68,21 +93,21 @@ char	**ft_split(char const *s, char c)
 {
 	char	**new_string;
 	int		strings;
-	int		i;
 
 	strings = counter(s, c);
-	new_string = malloc(sizeof(s) * (strings + 1));
+	new_string = ft_calloc(strings + 1, sizeof(*new_string));
 	if (!new_string)
 		return (NULL);
-	i = take_word(new_string, strings, s, c);
-	new_string[i] = NULL;
+	if (!store_words(new_string, s, c))
+			return (free_tab(new_string));
+	
 	return (new_string);
 }
 
 int main()
 {
-  char s[] = "   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ";
-  int count_strings = 12;
+  char s[] = "lorem ipsum";
+  int count_strings = 2;
   char **split_strings = ft_split(s, ' ');
   for (int i = 0; i < count_strings; i++)
 	printf("%s\n", split_strings[i]);

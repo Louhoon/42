@@ -6,11 +6,12 @@
 /*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/15 11:32:57 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:55:59 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/10/28 10:32:43 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -39,8 +40,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main(void)
 // {
-// 	char *s = "hola";
+// 	char *s = "hola you";
 // 	char *str = ft_substr(s, 2, 30);
 // 	printf("%s\n", str);
-// 	system("leaks a.out");
+// 	//system("leaks a.out");
 // }
