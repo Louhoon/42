@@ -31,7 +31,6 @@ static char	**free_tab(char **result)
 	return (NULL);
 }
 
-
 static	int	counter(const char *str, char c)
 {
 	int	i;
@@ -59,61 +58,47 @@ static	int	counter(const char *str, char c)
 	return (count_word);
 }
 
-static	int	end_word(const char *s, char c, int i)
+static	const char	*store_words(char **dest, const char *src, char c)
 {
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
-
-static	int	store_words(char **new_string, const char *s, char c)
-{
-	int	end;
+	int	len;
 	int	i;
 
+	len = 0;
+	while (*src == c)
+		src++;
+	while (src[len] != '\0' && src[len] != c)
+		len++;
+	*dest = malloc(sizeof(char) * (len + 1));
+	if (!*dest)
+		return (0);
 	i = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (s[i] != c)
-		{
-			end = end_word(s, c, i);
-			new_string[i] = ft_calloc(end - i + 1, sizeof(**new_string));
-			if (!*new_string)
-				return (0);
-			ft_memcpy(*new_string, s + i, end - i);
-			new_string++;
-			i = end - 1;
-		}
+		(*dest)[i] = src[i];
 		i++;
 	}
-	return (i);
+	(*dest)[i] = '\0';
+	src = src + len + 1;
+	return (src);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**new_string;
+	char	**new_strings;
 	int		strings;
+	int		i;
 
 	strings = counter(s, c);
-	new_string = ft_calloc(strings + 1, sizeof(*new_string));
-	if (!new_string)
-		return (NULL);
-	if (!store_words(new_string, s, c))
-			return (free_tab(new_string));
-	
-	return (new_string);
-}
-
-int main()
-{
-  char s[] = "lorem ipsum";
-  int count_strings = 2;
-  char **split_strings = ft_split(s, ' ');
-  for (int i = 0; i < count_strings; i++)
-	printf("%s\n", split_strings[i]);
-  for (int i = 0; i < count_strings; i++)
-	free(split_strings[i]);
-  free(split_strings);
-//system("leaks a.out");
-  return 0;
+	new_strings = malloc(sizeof(char *) * (strings + 1));
+	if (!new_strings)
+	{
+		new_strings[strings] = NULL;
+		i = 0;
+		while (i < strings)
+		{
+			s = store_words(new_strings + i, s, c);
+			i++;
+		}
+	}
+	return (new_strings);
 }
