@@ -23,6 +23,10 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+t_list	*ft_lstnew(void *content);
+
+int		ft_lstsize(t_list *lst);
+
 int		ft_isalpha(int c);
 
 int		ft_isdigit(int c);
