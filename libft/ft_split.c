@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 13:56:31 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 17:36:47 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/10/31 21:00:51 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,9 @@ char	**ft_split(char const *s, char c)
 	return (new_strings);
 }
 
-// int main()
+// int main(void)
 // {
-// 	char s[] = "";
+// 	char s[] = "   hello   you   loi  ff   ";
 // 	char **result;
 // 	result = ft_split(s, ' ');
 // 	int i = 0;
@@ -118,11 +118,5 @@ char	**ft_split(char const *s, char c)
 // 		i++;
 // 	}
 // 	free(result);
-// 	return 1;
 // 	// system("leaks a.out");
-// }
-
-// int main(void) {
-// 	main1();
-// 	// while(1);
 // }

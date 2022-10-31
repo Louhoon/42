@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>                +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
-#    Updated: 2022/10/31 20:33:48 by lvoisin-      ########   odam.nl          #
+#    Updated: 2022/10/31 20:59:29 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ BONUS OBJS		= $(BONUS:.c=.o)
 
 CC				= @gcc
 RM				= @rm -f
-CFLAGS			= -Wall -Wextra -Werror
+CFLAGS			= -Wall -Wextra -Werror -I
 
 NAME			= libft.a
 
@@ -46,6 +46,11 @@ clean:
 fclean:			clean
 				$(RM) $(NAME)
 				@echo	🧼Cleaned!
+
+run: 
+				
+				@gcc $(CFLAGS) *.c
+				@./a.out
 
 re:				fclean $(NAME)
 
