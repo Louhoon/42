@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>                +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
-#    Updated: 2022/10/31 19:09:04 by lvoisin-      ########   odam.nl          #
+#    Updated: 2022/10/31 20:33:48 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,11 +46,6 @@ clean:
 fclean:			clean
 				$(RM) $(NAME)
 				@echo	🧼Cleaned!
-
-run: 
-				
-				@gcc $(CFLAGS) *.c
-				@./a.out
 
 re:				fclean $(NAME)
 
