@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/15 10:13:56 by lvoisin-          #+#    #+#              #
-#    Updated: 2022/10/30 16:37:50 by marvin           ###   ########.fr        #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: marvin <marvin@student.42.fr>                +#+                      #
+#                                                    +#+                       #
+#    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
+#    Updated: 2022/10/31 17:51:07 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,15 @@ SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 					
 OBJS			= $(SRCS:.c=.o)
 
+BONUS			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+					ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+					ft_lstmap.c
+
+BONUS OBJS		= $(BONUS:.c=.o)
 
 CC				= @gcc
 RM				= @rm -f
-#CFLAGS			= -Wall -Wextra -Werror -g3 -fsanitize=address
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
 
@@ -39,7 +43,7 @@ $(NAME):		$(OBJS)
 				@echo	✅Done!
 
 clean:
-				$(RM) $(OBJS)
+				$(RM) $(OBJS) $(BONUS OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
@@ -51,5 +55,8 @@ run:
 				@./a.out
 
 re:				fclean $(NAME)
+
+bonus:			$(OBJS) $(BONUS OBJS)
+				@ar -crs $(NAME) $(OBJS) $(BONUS OBJS)
 
 .PHONY:			all clean fclean re

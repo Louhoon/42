@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 13:56:31 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:12:18 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/10/31 17:36:47 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,13 @@ static char	**free_tab(char **result)
 {
 	int	i;
 
-	if (!result)
-		return (NULL);
 	i = 0;
 	while (result[i])
 	{
 		free(result[i]);
-		result[i] = NULL;
 		i++;
 	}
-	free (result);
+	free(result);
 	return (NULL);
 }
 
@@ -38,6 +35,8 @@ static	int	counter(const char *str, char c)
 
 	i = 0;
 	count_word = 0;
+	if (!str)
+		return (0);
 	while (str[i] == c && str[i])
 		i++;
 	while (str[i])
@@ -51,7 +50,7 @@ static	int	counter(const char *str, char c)
 		if (str[i] != c && str[i])
 			i++;
 	}
-	if (str[i - 1] != c)
+	if (i > 0 && str[i - 1] != c)
 			count_word++;
 	return (count_word);
 }
@@ -68,7 +67,10 @@ static	const char	*store_words(char **dest, const char *src, char c)
 		len++;
 	*dest = malloc(sizeof(char) * (len + 1));
 	if (!*dest)
-		return (0);
+	{
+		free_tab(dest);
+		return (NULL);
+	}
 	i = 0;
 	while (i < len)
 	{
@@ -88,23 +90,39 @@ char	**ft_split(char const *s, char c)
 
 	strings = counter(s, c);
 	new_strings = malloc(sizeof(char *) * (strings + 1));
-	if (!new_strings)
+	if (new_strings)
 	{
 		new_strings[strings] = NULL;
 		i = 0;
 		while (i < strings)
 		{
-			new_strings = store_words(new_strings + i, s, c);
+			s = store_words(new_strings + i, s, c);
+			if (s == NULL)
+				return (NULL);
 			i++;
 		}
 	}
 	return (new_strings);
 }
 
-int main()
-{
-	char s[] = "hello you";
-	char *result;
-	result = *ft_split(s, ' ');
-	printf("%s\n", result);
-}
+// int main()
+// {
+// 	char s[] = "";
+// 	char **result;
+// 	result = ft_split(s, ' ');
+// 	int i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("%s\n", result[i]);
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// 	return 1;
+// 	// system("leaks a.out");
+// }
+
+// int main(void) {
+// 	main1();
+// 	// while(1);
+// }
