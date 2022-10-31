@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_atoi.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/12 21:39:09 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:52:11 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:19:56 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/31 15:19:59 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_striteri.c                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/18 03:12:36 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:57:43 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:17:22 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/31 15:17:26 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

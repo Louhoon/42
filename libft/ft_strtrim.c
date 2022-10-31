@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 11:47:54 by lvoisin-          #+#    #+#             */
-/*   Updated: 2022/10/29 10:22:11 by marvin           ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   ft_strtrim.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/10/31 15:19:01 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/31 15:19:04 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-// s1 the string to be trimmed
-// set the set of characters to trim
-// allocate memory to the trimmed string
-// return the trimmed string
-// string should be trim in the beginning and end of string
-
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

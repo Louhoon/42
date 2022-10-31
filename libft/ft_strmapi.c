@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strmapi.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/24 04:20:16 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:57:02 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:18:19 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/31 15:18:23 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,16 +3,14 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: lvoisin- <lvoisin-@student.42.fr>            +#+                     */
+/*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/10/11 13:54:38 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/24 04:52:59 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:18:37 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/10/31 15:18:44 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *fullString, const char *substring, size_t len)
 {
