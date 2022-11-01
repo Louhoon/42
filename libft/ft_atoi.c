@@ -6,11 +6,9 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:19:56 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:19:59 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/01 15:21:30 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -26,8 +24,8 @@ int	ft_atoi(const char *str)
 	i++;
 	if (str[i] == '-')
 	{
-	sign = -1;
-	i++;
+		sign = -1;
+		i++;
 	}
 	else if (str[i] == '+')
 	i++;
@@ -36,13 +34,11 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i] - 48;
 		i++;
 	}
-	if (sign == -1)
-		return (-result);
 	return (sign * result);
 }
 
 // int main(void)
 // {
-// 	printf("%d\n", ft_atoi("-123"));
+// 	printf("%d\n", ft_atoi("-2147483648"));
 // 	return (0);
 // }

@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>                +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
-#    Updated: 2022/10/31 20:59:29 by lvoisin-      ########   odam.nl          #
+#    Updated: 2022/11/01 14:46:33 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,36 +25,38 @@ OBJS			= $(SRCS:.c=.o)
 
 BONUS			=	ft_lstnew.c ft_lstsize.c
 
-BONUS OBJS		= $(BONUS:.c=.o)
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 CC				= @gcc
 RM				= @rm -f
-CFLAGS			= -Wall -Wextra -Werror -I
+CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= libft.a
+
+ifdef WITH_BONUS
+REG_OBJS = $(OBJS) $(BONUS_OBJS)
+else
+REG_OBJS = $(OBJS)
+endif
+
 
 all:			$(NAME)
 				
 
-$(NAME):		$(OBJS)
-				@ar -crs $(NAME) $(OBJS)
+$(NAME):		$(REG_OBJS)
+				@ar -crs $(NAME) $(REG_OBJS)
 				@echo	✅Done!
 
 clean:
-				$(RM) $(OBJS) $(BONUS OBJS)
+				$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
 				@echo	🧼Cleaned!
 
-run: 
-				
-				@gcc $(CFLAGS) *.c
-				@./a.out
-
 re:				fclean $(NAME)
 
-bonus:			$(OBJS) $(BONUS OBJS)
-				@ar -crs $(NAME) $(OBJS) $(BONUS OBJS)
+bonus:
+				@make WITH_BONUS=1 all
 
-.PHONY:			all clean fclean re
+.PHONY:			all clean fclean re bonus

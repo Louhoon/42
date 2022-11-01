@@ -6,12 +6,11 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 13:56:31 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 21:00:51 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/01 13:21:33 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 static char	**free_tab(char **result)
@@ -55,7 +54,7 @@ static	int	counter(const char *str, char c)
 	return (count_word);
 }
 
-static	const char	*store_words(char **dest, const char *src, char c)
+static	const char	*substrings(char **dest, const char *src, char c)
 {
 	int	len;
 	int	i;
@@ -84,30 +83,30 @@ static	const char	*store_words(char **dest, const char *src, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**new_strings;
-	int		strings;
+	char	**arr;
+	int		words;
 	int		i;
 
-	strings = counter(s, c);
-	new_strings = malloc(sizeof(char *) * (strings + 1));
-	if (new_strings)
+	words = counter(s, c);
+	arr = malloc(sizeof(char *) * (words + 1));
+	if (arr)
 	{
-		new_strings[strings] = NULL;
+		arr[words] = NULL;
 		i = 0;
-		while (i < strings)
+		while (i < words)
 		{
-			s = store_words(new_strings + i, s, c);
+			s = substrings(arr + i, s, c);
 			if (s == NULL)
 				return (NULL);
 			i++;
 		}
 	}
-	return (new_strings);
+	return (arr);
 }
 
-// int main(void)
+// int main()
 // {
-// 	char s[] = "   hello   you   loi  ff   ";
+// 	char s[] = "";
 // 	char **result;
 // 	result = ft_split(s, ' ');
 // 	int i = 0;
@@ -118,5 +117,11 @@ char	**ft_split(char const *s, char c)
 // 		i++;
 // 	}
 // 	free(result);
+// 	return 1;
 // 	// system("leaks a.out");
+// }
+
+// int main(void) {
+// 	main1();
+// 	// while(1);
 // }
