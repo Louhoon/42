@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:20:05 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:20:11 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:43:32 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(allocated_memory, (count * size));
 	return (allocated_memory);
 }
-
-// int     main(void)
-// {
-// 	char *dst;
-// 	char *dst2;
-
-// 	dst = calloc(SIZE_MAX, SIZE_MAX);
-// 	dst2 = ft_calloc(SIZE_MAX, SIZE_MAX);
-// 	printf("dst2 >> %s \n", dst2);
-// 	printf("dst >> %s \n", dst);
-// 	printf("================\n");
-// 	system("leaks a.out");
-
-// 	return (0);
-// }

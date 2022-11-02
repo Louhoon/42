@@ -16,16 +16,3 @@ int	ft_isalnum(int c)
 			|| (c >= 'a' && c <= 'z')
 			|| (c >= 'A' && c <= 'Z')));
 }
-
-/*int main(void)
-{
-	char c = '1';
-	if(ft_isalnum(c) != 0)
-	{
-	   printf("%c is an alphanum character", c); 
-	}
-	else
-	{
-		  printf("%c is not an alphanum character", c);
-	}
-}*/

@@ -27,13 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&(((char *) s)[i]));
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	#include <string.h>
-
-// 	char c = 'a';
-// 	char cat[] = "hello my name is carotte";
-// 	printf("%s\n", ft_strchr(cat, c));
-// 	printf("%s\n", strchr(cat, c));
-// }

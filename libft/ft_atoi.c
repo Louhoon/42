@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:19:56 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/01 15:21:30 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:38:50 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
-
-// int main(void)
-// {
-// 	printf("%d\n", ft_atoi("-2147483648"));
-// 	return (0);
-// }

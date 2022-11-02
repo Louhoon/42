@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:18:28 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:18:31 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:41:19 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			i++;
 	return (((unsigned char *) s1)[i] - ((unsigned char *) s2)[i]);
 }
-
-// int main(void)
-// {
-// 	printf("%d\n", ft_strncmp("1234", "1235", 3));
-// 	printf("%d\n", strncmp("1234", "1235", 3));
-// }

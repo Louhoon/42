@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:16:40 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:16:43 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:40:27 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n % 10, fd);
 	}
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr_fd("", 2);
-// 	return (0);
-// }

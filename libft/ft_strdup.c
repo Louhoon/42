@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:17:11 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:17:15 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:40:46 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,3 @@ char	*ft_strdup(const char *s1)
 	dupstring[i] = '\0';
 	return (dupstring);
 }
-
-// int main(void)
-// {
-// 	char original[12] = "Ooga Booga!";
-//     char *duplicate;
-//     int o_len,d_len;
-
-//     duplicate = ft_strdup(original);
-//     o_len = strlen(original);
-//     d_len = strlen(duplicate);
-
-//      printf("Original String: '%s' (%d)\n",
-//              original,o_len);
-//      printf("Duplicate string: '%s' (%d)\n",
-//              duplicate,d_len);
-//      return(0);
-// }

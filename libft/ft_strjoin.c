@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:17:33 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:17:36 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:40:56 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joinstr[i] = '\0';
 	return (joinstr);
 }
-
-// int main(void)
-// {
-// 	char s1[20] = "hello";
-// 	char s2[20] = "you";
-// 	char *join;
-// 	join = ft_strjoin(s1, s2);
-// 	printf("%s\n", join);
-// 	//system("leaks a.out");
-// }

@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:15:25 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/01 13:14:08 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:39:53 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	#include "libft.h"
-
-// 	char str[] = "louane.voisin@hotmail.com";
-// 	char *st = ft_memchr(str, '@', ft_strlen(str));
-// 	printf("%s\n", st);
-// 	char *s = memchr(str, '@', strlen(str));
-// 	printf("%s\n", s);
-// }

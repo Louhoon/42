@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:19:01 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:19:04 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:42:38 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[i] = '\0';
 	return (trimmed);
 }
-
-// int main(void)
-// {
-// 	char s1[] = "hello.world.hello";
-// 	char *plubuscule = ft_strtrim(s1, "hello.");
-// 	printf("%s\n", plubuscule);
-// 	free(plubuscule);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:15:39 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:15:42 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:39:57 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (((unsigned char *) s1)[i] - ((unsigned char *) s2)[i]);
 }
-
-// int main(void)
-// {
-// 	printf("%d\n", ft_memcmp("", "df", 3));
-// 	printf("%d\n", memcmp("", "df", 3));
-// }

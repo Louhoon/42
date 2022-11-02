@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:18:37 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:18:44 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:42:28 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_strnstr(const char *fullString, const char *substring, size_t len)
 	}
 	return (0);
 }
-
-// int main(void)
-// {
-// 	const char fullString[] = "Foo Bar Baz";
-// 	const char substring[] = "Bar";
-// 	char *ptr;
-
-// 	printf(("%s\n"), ptr = ft_strnstr(fullString, substring, 12));
-// 	printf(("%s\n"), ptr = strnstr(fullString, substring, 12));
-// }

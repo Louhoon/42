@@ -14,16 +14,3 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }
-
-// int main(void)
-// {
-// 	 char c = 'd';
-// 	 if(ft_isalpha(c) != 0)
-// 	 {
-// 		 printf("%c is an alphabetical character", c); 
-// 	 }
-// 	 else
-// 	 {
-// 			 printf("%c is not an alphabetical character", c);
-// 	 }
-// }

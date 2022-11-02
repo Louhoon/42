@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:17:44 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:17:47 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:41:01 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +39,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dest_len = dstsize;
 	return (dest_len + src_len);
 }
-
-// int main(void)
-// {
-// 	char src[] = "you";
-// 	char dest[20] = "hello";
-
-// 	char src1[] = "you";
-// 	char dest1[20] = "hello";
-
-// 	printf("%zu\n", ft_strlcat(dest1, src1, 0));
-// 	ft_strlcat(dest1, src1, 0);
-// 	printf("%s\n", dest1);
-
-// 	printf("%zu\n", strlcat(dest, src, 0));
-// 	strlcat(dest, src, 0);
-// 	printf("%s\n", dest);
-// }

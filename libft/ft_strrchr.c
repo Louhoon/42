@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 15:18:48 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/10/31 15:18:50 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:42:33 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char s[] = "hello daenanang fgnsfgn";
-// 	char c = '\0';
-// 	printf("%s\n", ft_strrchr(s, c));
-// 	printf("%s\n", strrchr(s, c));
-// }

@@ -6,12 +6,11 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/31 13:56:31 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/01 13:21:33 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/02 13:47:09 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static char	**free_tab(char **result)
 {
@@ -103,25 +102,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr);
 }
-
-// int main()
-// {
-// 	char s[] = "";
-// 	char **result;
-// 	result = ft_split(s, ' ');
-// 	int i = 0;
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	return 1;
-// 	// system("leaks a.out");
-// }
-
-// int main(void) {
-// 	main1();
-// 	// while(1);
-// }

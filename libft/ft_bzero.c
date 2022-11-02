@@ -18,11 +18,3 @@ void	ft_bzero(void *s, size_t n)
 		return ;
 	ft_memset(s, 0, n);
 }
-
-// int	main(void)
-// {
-// 	char str[] = "hello dhehes";
-// 	printf("\nBefore ft_bzero: %s\n", str);
-// 	ft_bzero(str, sizeof(char));
-// 	printf("\nAfter ft_bzero: %s\n", str);
-// }
