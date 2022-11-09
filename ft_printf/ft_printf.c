@@ -1,26 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_printf.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/09 18:27:07 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/11/09 17:56:07 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/09 19:01:37 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "ft_printf.h"
 
-// int main(void)
-// {
-// 	printf("hello %c\n", 97);
-// 	// printf("%s\n");
-// 	// printf("%p\n");
-// 	// printf("%d\n");
-// 	// printf("%i\n");
-// 	// printf("%u\n");
-// 	// printf("%x\n");
-// 	// printf("%X\n");
-// 	// printf("%%\n");
-// }
+const char	*ft_putstr(const char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (s);
+}
+
+
+void ft_printf(const char *str, ...)
+{
+	va_list args;
+	va_start(args, str);
+	while(*str != '\0')
+	{
+		if(*str != '%')
+		{
+			ft_putstr(str);
+		}
+		str++;
+	}
+	va_end(args);
+}
+
+int main(void)
+{
+	ft_printf("hello world\n");
+	return (0);
+}

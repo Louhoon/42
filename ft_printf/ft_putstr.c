@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_putstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/09 18:27:07 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/11/09 18:23:43 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/09 18:48:25 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
+
+char	*ft_putstr(const char *s)
+{
+	int i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (s);
+}
 
 // int main(void)
 // {
-// 	printf("hello %c\n", 97);
-// 	// printf("%s\n");
-// 	// printf("%p\n");
-// 	// printf("%d\n");
-// 	// printf("%i\n");
-// 	// printf("%u\n");
-// 	// printf("%x\n");
-// 	// printf("%X\n");
-// 	// printf("%%\n");
+// 	ft_putstr("hello\n");
+// 	return (0);
 // }

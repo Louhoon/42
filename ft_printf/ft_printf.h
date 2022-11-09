@@ -6,15 +6,18 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:32:42 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2022/11/07 20:06:50 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2022/11/09 18:54:19 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-#define FT_PRINTF
+#ifndef FT_PRINTF_H
+#define FT_PRINTF_H
 
 # include <stdarg.h>
+# include <unistd.h>
 
-int ft_printf(const char *str, ...);
+const char	*ft_putstr(const char *s);
+
+void	ft_printf(const char *str, ...);
 
 #endif
