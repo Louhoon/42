@@ -6,15 +6,15 @@
 #    By: lvoisin- <lvoisin-@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/07 19:40:41 by lvoisin-      #+#    #+#                  #
-#    Updated: 2023/01/20 08:48:33 by lvoisin-      ########   odam.nl          #
+#    Updated: 2023/01/20 11:16:31 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_printf.c 
+SRCS	= ft_printf.c ft_print_utils.c
 
 CC = @gcc
 RM = @rm -f
-CFLAGS += -Wall -Werror -Wextra -I./libft
+CFLAGS += -Wall -Werror -Wextra -g3 -I./libft
 NAME = libftprintf.a
 LIBFT = libft
 
