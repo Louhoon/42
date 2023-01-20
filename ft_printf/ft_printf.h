@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:32:42 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/20 10:35:50 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/20 16:19:11 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,11 @@
 int		ft_printf(const char *str, ...);
 
 int	ft_printstr(const char *s);
+
+int	ft_putnumber(int n);
+
+int	ft_unsignedint(unsigned int);
+
+int	ft_print_percent(char c);
 
 #endif

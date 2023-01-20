@@ -6,24 +6,35 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 17:56:07 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/20 11:26:47 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/20 18:13:37 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-void	ft_format(va_list args, const char str)
+int	ft_format(va_list args, const char str, int len)
 {
-	int len;
 	
 	len = 0;
-	while (len)
-	{
-		if (str == 's')
-			len = len + ft_printstr(va_arg(args, char *));
-		len++;
-	}
+	if (str == 's')
+		len = len + ft_printstr(va_arg(args, char *));
+	// else if (str == 'c')
+	// 	return(0);
+	else if (str == 'd')
+		len = len + ft_putnumber(va_arg(args, int));
+	else if (str == 'i')
+		len = len + ft_putnumber(va_arg(args, int));
+	else if (str == 'u')
+		len = len + ft_unsignedint(va_arg(args, unsigned int));
+	// else if (str == 'x')
+	// 	return(0);
+	// else if (str == 'X')
+	// 	return (0);
+	else if (str == '%')
+		len = len + ft_print_percent(va_arg(args, int));
+	len++;
+	return (len);
 }
 
 
@@ -39,9 +50,12 @@ int	ft_printf(const char *s, ...)
 	while (s[j])
 	{
 		if (s[j] == '%')
-			ft_format(args, s[j + 1]);
+		{
+			ft_format(args, s[j + 1], len);
+			j++;
+		}
 		else
-			ft_printstr(s);
+			ft_putchar_fd(s[j], 1);
 		j++;
 	}
 	va_end(args);
@@ -50,7 +64,7 @@ int	ft_printf(const char *s, ...)
 
 int main(void)
 {	
-	ft_printf("hello\n");
-	//printf("hello\n");
+	ft_printf("%d\n", 12);
+	printf("%d\n", 12);
 	return (0);
 }
