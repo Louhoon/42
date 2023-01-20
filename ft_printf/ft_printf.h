@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/07 17:32:42 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/14 18:26:36 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/20 08:08:29 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-
-const char	*ft_putstr(const char *s);
+# include <stdio.h>
 
 int	ft_printf(const char *str, ...);
 

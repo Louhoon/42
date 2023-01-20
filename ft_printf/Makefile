@@ -6,7 +6,7 @@
 #    By: lvoisin- <lvoisin-@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/07 19:40:41 by lvoisin-      #+#    #+#                  #
-#    Updated: 2023/01/14 18:26:40 by lvoisin-      ########   odam.nl          #
+#    Updated: 2023/01/20 08:48:33 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS	= ft_printf.c
 
 CC = @gcc
 RM = @rm -f
-CFLAGS += -Wall -Werror -Wextra -I./include
+CFLAGS += -Wall -Werror -Wextra -I./libft
 NAME = libftprintf.a
 LIBFT = libft
 
@@ -38,5 +38,8 @@ fclean:	clean
 
 re:
 		fclean $(NAME)
+
+run:
+		@gcc $(CFLAGS) libft/libft.a *.c && ./a.out
 
 .PHONY:	all clean fclean re
