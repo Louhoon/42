@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/22 11:52:21 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 17:19:02 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/22 18:52:13 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,16 +65,16 @@ int	ft_print_uphexa(unsigned int n)
 
 int	ft_print_ptr(void *pointer)
 {
-	char	*hex_digits;
-	char	hex[sizeof(void *) * 2 + 1];
-	unsigned long address;
-	int		i;
-	int		j;
+	char				*hex_digits;
+	char				hex[sizeof(void *) * 2 + 1];
+	unsigned long int	address;
+	int					i;
+	int					j;
 
 	hex_digits = "0123456789abcdef";
-	address = (unsigned long)pointer;
+	address = (unsigned long int)pointer;
 	i = 0;
-	while ((unsigned long)pointer > 0)
+	while (address > 0)
 	{
 		hex[i++] = hex_digits[address % 16];
 		address = address / 16;

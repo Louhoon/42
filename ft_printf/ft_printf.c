@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 17:56:07 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 17:22:17 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/22 18:50:18 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,18 +61,4 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end(args);
 	return (len);
-}
-
-int	main(void)
-{	
-	char	*i;
-	// int	result;
-
-	i = "hello";
-// 	// ft_printf("%d, hel%ulo %i\n", 12, 5, 2);
-	// ft_printf("%p\n", i);
-	 printf("%p\n", i);
-	// printf("num char = %d\n", result);
-	// ft_printf("num char = %d\n", result);
-// 	// printf("%d, hel%ulo %i\n", 12, 5, 2);
 }

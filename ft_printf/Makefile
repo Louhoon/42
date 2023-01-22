@@ -6,7 +6,7 @@
 #    By: lvoisin- <lvoisin-@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/07 19:40:41 by lvoisin-      #+#    #+#                  #
-#    Updated: 2023/01/22 16:41:38 by lvoisin-      ########   odam.nl          #
+#    Updated: 2023/01/22 18:47:29 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,7 @@ fclean:	clean
 		$(RM) $(LIBFT)/libft.a
 		@echo 🧼Cleaned
 
-re:
-		fclean $(NAME)
+re:		fclean $(NAME)
 
 run:
 		@gcc $(CFLAGS) libft/libft.a *.c && ./a.out
