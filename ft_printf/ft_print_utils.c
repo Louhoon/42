@@ -6,7 +6,7 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/20 09:12:36 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/20 16:22:16 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/22 16:27:01 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,30 @@
 
 int	ft_printstr(const char *s)
 {
-	int len;
+	int	len;
 
 	len = ft_strlen(s);
 	if (s != NULL)
 		ft_putstr(s);
 	else
-		write(1, "(null)", 1);
-
+		write(1, "(null)", 6);
 	return (len);
 }
 
 int	ft_putnumber(int n)
 {
 	ft_putnbr_fd(n, 1);
-	return(n);
+	return (n);
 }
 
 int	ft_unsignedint(unsigned int n)
 {
 	ft_unputnbr_fd(n, 1);
-	return(n);
+	return (n);
 }
 
-int	ft_print_percent(char c)
+int	ft_print_char(char c)
 {
-	c = '%';
-	return(c);
+	write(1, &c, 1);
+	return (1);
 }

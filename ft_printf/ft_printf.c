@@ -6,65 +6,73 @@
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/09 17:56:07 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/20 18:13:37 by lvoisin-      ########   odam.nl         */
+/*   Updated: 2023/01/22 17:22:17 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int	ft_format(va_list args, const char str, int len)
+int	ft_format(va_list args, const char str)
 {
-	
+	int	len;
+
 	len = 0;
 	if (str == 's')
 		len = len + ft_printstr(va_arg(args, char *));
-	// else if (str == 'c')
-	// 	return(0);
+	else if (str == 'c')
+		len = len + ft_print_char(va_arg(args, int));
 	else if (str == 'd')
 		len = len + ft_putnumber(va_arg(args, int));
 	else if (str == 'i')
 		len = len + ft_putnumber(va_arg(args, int));
 	else if (str == 'u')
 		len = len + ft_unsignedint(va_arg(args, unsigned int));
-	// else if (str == 'x')
-	// 	return(0);
-	// else if (str == 'X')
-	// 	return (0);
+	else if (str == 'x')
+		len = len + ft_print_hexa(va_arg(args, unsigned int));
+	else if (str == 'X')
+		len = len + ft_print_uphexa(va_arg(args, unsigned int));
+	else if (str == 'p')
+		len = len + ft_print_ptr(va_arg(args, void *));
 	else if (str == '%')
-		len = len + ft_print_percent(va_arg(args, int));
-	len++;
+		len = len + ft_print_char('%');
 	return (len);
 }
 
-
 int	ft_printf(const char *s, ...)
 {
-	int j;
-	int len;
-	va_list args;
-	va_start(args, s);
+	int		j;
+	int		len;
+	va_list	args;
 
+	va_start(args, s);
 	j = 0;
-	len = ft_strlen(s);
+	len = 0;
 	while (s[j])
 	{
 		if (s[j] == '%')
 		{
-			ft_format(args, s[j + 1], len);
+			len = len + ft_format(args, s[j + 1]);
 			j++;
 		}
 		else
-			ft_putchar_fd(s[j], 1);
+			len = len + ft_print_char(s[j]);
 		j++;
 	}
 	va_end(args);
 	return (len);
 }
 
-int main(void)
+int	main(void)
 {	
-	ft_printf("%d\n", 12);
-	printf("%d\n", 12);
-	return (0);
+	char	*i;
+	// int	result;
+
+	i = "hello";
+// 	// ft_printf("%d, hel%ulo %i\n", 12, 5, 2);
+	// ft_printf("%p\n", i);
+	 printf("%p\n", i);
+	// printf("num char = %d\n", result);
+	// ft_printf("num char = %d\n", result);
+// 	// printf("%d, hel%ulo %i\n", 12, 5, 2);
 }
