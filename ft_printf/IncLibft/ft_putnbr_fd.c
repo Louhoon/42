@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_putnbr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 19:40:12 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:16:40 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/02 13:40:27 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
 #include "libft.h"
 
-int	main(void)
-{	
-	// char	*i;
-	int		result;
-
-	// i = "hi55";
-	result = ft_printf(" %s\n", "ergewrg");
-	result = printf(" %s\n", "ergewrg");
-	ft_printf("num char = %d\n", result);
-	printf("num char = %d\n", result);
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (n >= 0 && n < 10)
+		ft_putchar_fd(n + 48, fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(n * (-1), fd);
+	}
+	else
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
 }

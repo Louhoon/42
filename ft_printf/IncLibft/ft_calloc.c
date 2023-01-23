@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 19:40:12 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:20:05 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/02 13:43:32 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
 #include "libft.h"
 
-int	main(void)
-{	
-	// char	*i;
-	int		result;
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*allocated_memory;
 
-	// i = "hi55";
-	result = ft_printf(" %s\n", "ergewrg");
-	result = printf(" %s\n", "ergewrg");
-	ft_printf("num char = %d\n", result);
-	printf("num char = %d\n", result);
+	allocated_memory = malloc(count * size);
+	if (allocated_memory == NULL)
+		return (NULL);
+	ft_bzero(allocated_memory, (count * size));
+	return (allocated_memory);
 }

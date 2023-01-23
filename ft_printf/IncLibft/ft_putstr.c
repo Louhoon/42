@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_putstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 19:40:12 by lvoisin-      ########   odam.nl         */
+/*   Created: 2023/01/20 08:53:02 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2023/01/22 19:15:41 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
-#include "libft.h"
+#include <unistd.h>
 
-int	main(void)
-{	
-	// char	*i;
-	int		result;
+int	ft_putstr(const char *s)
+{
+	int	i;
 
-	// i = "hi55";
-	result = ft_printf(" %s\n", "ergewrg");
-	result = printf(" %s\n", "ergewrg");
-	ft_printf("num char = %d\n", result);
-	printf("num char = %d\n", result);
+	i = 0;
+	if (s == NULL)
+		write(1, "(null)", 6);
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
 }

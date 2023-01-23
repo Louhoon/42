@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 19:40:12 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 15:15:39 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/02 13:39:57 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
 #include "libft.h"
 
-int	main(void)
-{	
-	// char	*i;
-	int		result;
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t	i;
 
-	// i = "hi55";
-	result = ft_printf(" %s\n", "ergewrg");
-	result = printf(" %s\n", "ergewrg");
-	ft_printf("num char = %d\n", result);
-	printf("num char = %d\n", result);
+	if (n == 0)
+		return (0);
+	i = 0;
+	while (((unsigned char *) s1)[i] == ((unsigned char *) s2)[i] && i < n - 1)
+		i++;
+	return (((unsigned char *) s1)[i] - ((unsigned char *) s2)[i]);
 }

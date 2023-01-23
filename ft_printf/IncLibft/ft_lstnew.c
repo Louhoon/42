@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   ft_lstnew.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 19:21:15 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/22 19:40:12 by lvoisin-      ########   odam.nl         */
+/*   Created: 2022/10/31 17:56:38 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2022/11/01 13:13:51 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
 #include "libft.h"
 
-int	main(void)
-{	
-	// char	*i;
-	int		result;
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*elements;
 
-	// i = "hi55";
-	result = ft_printf(" %s\n", "ergewrg");
-	result = printf(" %s\n", "ergewrg");
-	ft_printf("num char = %d\n", result);
-	printf("num char = %d\n", result);
+	elements = malloc(sizeof(*elements));
+	if (!elements)
+		return (NULL);
+	elements->content = content;
+	elements->next = NULL;
+	return (elements);
 }
