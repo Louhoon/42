@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_printf.h                                        :+:    :+:            */
+/*   ft_unputnbr_fd.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/07 17:32:42 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/23 15:18:24 by lvoisin-      ########   odam.nl         */
+/*   Created: 2023/01/20 14:16:17 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2023/01/28 16:43:57 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-# include <stdio.h>
-
-int	ft_printf(const char *str, ...);
-
-int	ft_printstr(const char *s);
-
-int	ft_putnumber(int n);
-
-int	ft_unsignedint(unsigned int n);
-
-int	ft_print_char(char c);
-
-int	ft_print_hexa(unsigned int n);
-
-int	ft_print_uphexa(unsigned int n);
-
-int	ft_print_ptr(unsigned long long pointer);
-
-#endif
+void	ft_unputnbr_fd(unsigned int n, int fd)
+{
+	if (n >= 0 && n < 10)
+		ft_putchar_fd(n + 48, fd);
+	else if (n < 0)
+	{
+		write(1, &n, 1);
+	}
+	else
+	{
+		ft_unputnbr_fd(n / 10, fd);
+		ft_unputnbr_fd(n % 10, fd);
+	}
+}

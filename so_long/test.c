@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_unputnbr_fd.c                                   :+:    :+:            */
+/*   test.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: lvoisin- <lvoisin-@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/01/20 14:16:17 by lvoisin-      #+#    #+#                 */
-/*   Updated: 2023/01/23 15:52:40 by lvoisin-      ########   odam.nl         */
+/*   Created: 2023/03/11 13:26:21 by lvoisin-      #+#    #+#                 */
+/*   Updated: 2023/03/11 17:40:32 by lvoisin-      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "MLX42/include/MLX42/MLX42.h"
 
-void	ft_unputnbr_fd(unsigned int n, int fd)
+int main(void)
 {
-	if (n >= 0 && n < 10)
-		ft_putchar_fd(n + 48, fd);
-	else if (n < 0)
-	{
-		write(1, &n, 1);
-	}
-	else
-	{
-		ft_unputnbr_fd(n / 10, fd);
-		ft_unputnbr_fd(n % 10, fd);
-	}
+	void	*mlx_ptr;
+	void	*image;
+
+	mlx_ptr = mlx_init(500, 500, "game", true);
+	image = mlx_new_image(mlx_ptr, 150, 150);
+	mlx_loop(mlx_ptr);
 }

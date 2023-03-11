@@ -6,7 +6,7 @@
 #    By: marvin <marvin@student.42.fr>                +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/10/15 10:13:56 by lvoisin-      #+#    #+#                  #
-#    Updated: 2023/01/22 15:02:53 by lvoisin-      ########   odam.nl          #
+#    Updated: 2023/03/11 17:27:34 by lvoisin-      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all:			$(NAME)
 
 $(NAME):		$(REG_OBJS)
 				@ar -crs $(NAME) $(REG_OBJS)
-				@echo	✅Done!
+				@echo	[libft compiled ✅]
 
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS)
